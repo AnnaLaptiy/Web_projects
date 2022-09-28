@@ -94,7 +94,7 @@ let findPiece = function (pieceId) {
     let parsed = parseInt(pieceId);
     return board.indexOf(parsed);
 };
-let turn = true; //(thue - красный ход false-черный ход)
+let turn = false; //(thue - красный ход false-черный ход)
 let redScore = 12;
 let blackScore = 12;
 let playerPieces;
