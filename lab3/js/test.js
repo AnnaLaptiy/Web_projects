@@ -439,16 +439,16 @@ function resetBordColor(){
 function givePieceBorder() {
 
     for (var el = 0; el < document.getElementsByClassName("black-piece").length; el++) {
-        document.getElementsByClassName("black-piece")[el].style.background = "linear-gradient(160deg, rgb(255, 255, 255), black)";
+        document.getElementsByClassName("black-piece")[el].style.background = "linear-gradient(160deg, rgb(255, 197, 197), rgb(189, 0, 0))";
     }
     for (var el = 0; el < document.getElementsByClassName("red-piece").length; el++) {
-        document.getElementsByClassName("red-piece")[el].style.background = "linear-gradient(160deg, rgb(255, 197, 197), rgb(189, 0, 0))";
+        document.getElementsByClassName("red-piece")[el].style.background = "linear-gradient(160deg, rgb(255, 255, 255), black)";
     }
     for (var el = 0; el < document.getElementsByClassName("red-piece king").length; el++) {
-        document.getElementsByClassName("red-piece king")[el].style.background = " linear-gradient(160deg, rgb(255, 123, 0), rgb(189, 0, 0))";
+        document.getElementsByClassName("red-piece king")[el].style.background = "linear-gradient(160deg, rgb(0, 128, 17), black)";
     }
     for (var el = 0; el < document.getElementsByClassName("black-piece king").length; el++) {
-        document.getElementsByClassName("black-piece king")[el].style.background = "linear-gradient(160deg, rgb(0, 128, 17), black)";
+        document.getElementsByClassName("black-piece king")[el].style.background = " linear-gradient(160deg, rgb(255, 123, 0), rgb(189, 0, 0))";
     }
 
     if (selectedPiece.seventhSpace || selectedPiece.ninthSpace || selectedPiece.fourteenthSpace || selectedPiece.eighteenthSpace
@@ -460,12 +460,12 @@ function givePieceBorder() {
 
             resetBordColor();
             for (var el = 0; el < document.getElementsByClassName("black-piece cur").length; el++) {
-                document.getElementsByClassName("black-piece cur")[el].style.background = "linear-gradient(160deg, rgb(255, 255, 255), black)";
+                document.getElementsByClassName("black-piece cur")[el].style.background = "linear-gradient(160deg, rgb(255, 197, 197), rgb(189, 0, 0))";
                 document.getElementById(selectedPiece.pieceId).classList.remove('cur');
             }
             for (var el = 0; el < document.getElementsByClassName("red-piece cur").length; el++) {
 
-                document.getElementsByClassName("red-piece cur")[el].style.background = "linear-gradient(160deg, rgb(255, 197, 197), rgb(189, 0, 0))";
+                document.getElementsByClassName("red-piece cur")[el].style.background = "linear-gradient(160deg, rgb(255, 255, 255), black)";
                 document.getElementById(selectedPiece.pieceId).classList.remove('cur');
 
             }
@@ -473,14 +473,14 @@ function givePieceBorder() {
         } else if(clas=='red-piece king cur'){
             resetBordColor();
             for (var el = 0; el < document.getElementsByClassName(clas).length; el++) {
-                document.getElementsByClassName(clas)[el].style.background = "linear-gradient(160deg, rgb(255, 123, 0), rgb(189, 0, 0))";
+                document.getElementsByClassName(clas)[el].style.background = "linear-gradient(160deg, rgb(0, 128, 17), black)";
                 document.getElementById(selectedPiece.pieceId).classList.remove('cur');
             }
 
         } else if(clas=='black-piece king cur'){
             resetBordColor();
             for (var el = 0; el < document.getElementsByClassName(clas).length; el++) {
-                document.getElementsByClassName(clas)[el].style.background = "linear-gradient(160deg, rgb(0, 128, 17), black)";
+                document.getElementsByClassName(clas)[el].style.background = "linear-gradient(160deg, rgb(255, 123, 0), rgb(189, 0, 0))";
                 document.getElementById(selectedPiece.pieceId).classList.remove('cur');
             }
         }else {
