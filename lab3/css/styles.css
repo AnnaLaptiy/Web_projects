@@ -83,7 +83,7 @@ td {
   color: lightgray;
 }
 
-.black-piece {
+.red-piece {
   width: 20px;
   height: 20px;
   padding: 12px;
@@ -92,7 +92,7 @@ td {
   border-radius: 50px;
 }
 
-.red-piece {
+.black-piece {
   width: 20px;
   height: 20px;
   padding: 12px;
@@ -101,12 +101,12 @@ td {
   border-radius: 50px;
 }
 
-.king.red-piece {
+.king.black-piece {
   background: linear-gradient(160deg, rgb(255, 123, 0), rgb(189, 0, 0));
   border: 1px solid rgb(255, 24, 8);
 }
 
-.king.black-piece {
+.king.red-piece {
   background: linear-gradient(160deg, rgb(0, 128, 17), black);
   border: 1px solid rgb(0, 0, 0);
 }
