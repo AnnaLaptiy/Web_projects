@@ -1197,55 +1197,516 @@ function checkAvailableJumpSpaces() {
     // checkPieceConditions();//*9
 }
 
+function checkAvailableJumpSpaces11(curIndex) {
+    // console.log("\n ! "+curIndex)
+
+    var curSH = document.getElementById(curIndex).getAttribute('class');
+    let boardCurInd = board.indexOf(curIndex);
+    if (curIndex < 12) {
+
+        var res = false;
+
+        if (board[boardCurInd + 14] === null
+            && cells[boardCurInd + 14].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 7] >= 12) {
+            res = true;
+
+        }
+
+        if (board[boardCurInd + 18] === null
+            && cells[boardCurInd + 18].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 9] >= 12) {
+            res = true;
+        }
+        ///////////
+        if (board[boardCurInd - 14] === null
+            && cells[boardCurInd - 14].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 7] >= 12 && board[boardCurInd - 7] !== null) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 21] === null
+            && cells[boardCurInd - 21].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 14] >= 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 28] === null
+            && cells[boardCurInd - 28].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 21] >= 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null || board[boardCurInd - 21] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 35] === null
+            && cells[boardCurInd - 35].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 28] >= 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null || board[boardCurInd - 21] !== null || board[boardCurInd - 28] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 42] === null
+            && cells[boardCurInd - 42].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 35] >= 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null || board[boardCurInd - 21] !== null || board[boardCurInd - 28] !== null || board[boardCurInd - 35] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 49] === null
+            && cells[boardCurInd - 49].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 42] >= 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null || board[boardCurInd - 21] !== null || board[boardCurInd - 28] !== null || board[boardCurInd - 35] !== null || board[boardCurInd - 42] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        ////////////////
+        if (board[boardCurInd - 18] === null
+            && cells[boardCurInd - 18].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 9] >= 12 && board[boardCurInd - 9] !== null) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 27] === null
+            && cells[boardCurInd - 27].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 18] >= 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 36] === null
+            && cells[boardCurInd - 36].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 27] >= 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null || board[boardCurInd - 27] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 45] === null
+            && cells[boardCurInd - 45].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 36] >= 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null || board[boardCurInd - 27] !== null || board[boardCurInd - 36] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 54] === null
+            && cells[boardCurInd - 54].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 45] >= 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null || board[boardCurInd - 27] !== null || board[boardCurInd - 36] !== null || board[boardCurInd - 45] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 63] === null
+            && cells[boardCurInd - 63].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 54] >= 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null || board[boardCurInd - 27] !== null || board[boardCurInd - 36] !== null || board[boardCurInd - 45] !== null || board[boardCurInd - 54] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+
+        ///////+_+_+
+        if (board[boardCurInd + 14] === null
+            && cells[boardCurInd + 14].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 7] >= 12 && board[boardCurInd + 7] !== null) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 21] === null
+            && cells[boardCurInd + 21].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 14] >= 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 28] === null
+            && cells[boardCurInd + 28].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 21] >= 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null || board[boardCurInd + 21] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 35] === null
+            && cells[boardCurInd + 35].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 28] >= 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null || board[boardCurInd + 21] !== null || board[boardCurInd + 28] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 42] === null
+            && cells[boardCurInd + 42].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 35] >= 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null || board[boardCurInd + 21] !== null || board[boardCurInd + 28] !== null || board[boardCurInd + 35] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 49] === null
+            && cells[boardCurInd + 49].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 42] >= 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null || board[boardCurInd + 21] !== null || board[boardCurInd + 28] !== null || board[boardCurInd + 35] !== null || board[boardCurInd + 42] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        /////
+        if (board[boardCurInd + 18] === null
+            && cells[boardCurInd + 18].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 9] >= 12 && board[boardCurInd + 9] !== null) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 27] === null
+            && cells[boardCurInd + 27].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 18] >= 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 36] === null
+            && cells[boardCurInd + 36].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 27] >= 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null || board[boardCurInd + 27] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 45] === null
+            && cells[boardCurInd + 45].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 36] >= 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null || board[boardCurInd + 27] !== null || board[boardCurInd + 36] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 54] === null
+            && cells[boardCurInd + 54].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 45] >= 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null || board[boardCurInd + 27] !== null || board[boardCurInd + 36] !== null || board[boardCurInd + 45] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 63] === null
+            && cells[boardCurInd + 63].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 54] >= 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null || board[boardCurInd + 27] !== null || board[boardCurInd + 36] !== null || board[boardCurInd + 45] !== null || board[boardCurInd + 54] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        return res;
+    } else {
+        var res = false;
+        if (board[boardCurInd - 14] === null
+            && cells[boardCurInd - 14].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 7] < 12 && board[boardCurInd - 7] !== null) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 21] === null
+            && cells[boardCurInd - 21].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 14] < 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 28] === null
+            && cells[boardCurInd - 28].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 21] < 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null || board[boardCurInd - 21] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 35] === null
+            && cells[boardCurInd - 35].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 28] < 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null || board[boardCurInd - 21] !== null || board[boardCurInd - 28] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 42] === null
+            && cells[boardCurInd - 42].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 35] < 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null || board[boardCurInd - 21] !== null || board[boardCurInd - 28] !== null || board[boardCurInd - 35] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 49] === null
+            && cells[boardCurInd - 49].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 42] < 12 && (board[boardCurInd - 7] !== null || board[boardCurInd - 14] !== null || board[boardCurInd - 21] !== null || board[boardCurInd - 28] !== null || board[boardCurInd - 35] !== null || board[boardCurInd - 42] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        ////////////////
+        if (board[boardCurInd - 18] === null
+            && cells[boardCurInd - 18].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 9] < 12 && board[boardCurInd - 9] !== null) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 27] === null
+            && cells[boardCurInd - 27].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 18] < 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 36] === null
+            && cells[boardCurInd - 36].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 27] < 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null || board[boardCurInd - 27] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 45] === null
+            && cells[boardCurInd - 45].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 36] < 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null || board[boardCurInd - 27] !== null || board[boardCurInd - 36] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 54] === null
+            && cells[boardCurInd - 54].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 45] < 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null || board[boardCurInd - 27] !== null || board[boardCurInd - 36] !== null || board[boardCurInd - 45] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd - 63] === null
+            && cells[boardCurInd - 63].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 54] < 12 && (board[boardCurInd - 9] !== null || board[boardCurInd - 18] !== null || board[boardCurInd - 27] !== null || board[boardCurInd - 36] !== null || board[boardCurInd - 45] !== null || board[boardCurInd - 54] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 14] === null
+            && cells[boardCurInd + 14].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 7] < 12 && board[boardCurInd + 7] !== null) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 21] === null
+            && cells[boardCurInd + 21].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 14] < 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 28] === null
+            && cells[boardCurInd + 28].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 21] < 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null || board[boardCurInd + 21] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 35] === null
+            && cells[boardCurInd + 35].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 28] < 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null || board[boardCurInd + 21] !== null || board[boardCurInd + 28] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 42] === null
+            && cells[boardCurInd + 42].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 35] < 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null || board[boardCurInd + 21] !== null || board[boardCurInd + 28] !== null || board[boardCurInd + 35] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 49] === null
+            && cells[boardCurInd + 49].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 42] < 12 && (board[boardCurInd + 7] !== null || board[boardCurInd + 14] !== null || board[boardCurInd + 21] !== null || board[boardCurInd + 28] !== null || board[boardCurInd + 35] !== null || board[boardCurInd + 42] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        /////
+        if (board[boardCurInd + 18] === null
+            && cells[boardCurInd + 18].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 9] < 12 && board[boardCurInd + 9] !== null) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 27] === null
+            && cells[boardCurInd + 27].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 18] < 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 36] === null
+            && cells[boardCurInd + 36].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 27] < 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null || board[boardCurInd + 27] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 45] === null
+            && cells[boardCurInd + 45].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 36] < 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null || board[boardCurInd + 27] !== null || board[boardCurInd + 36] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 54] === null
+            && cells[boardCurInd + 54].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 45] < 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null || board[boardCurInd + 27] !== null || board[boardCurInd + 36] !== null || board[boardCurInd + 45] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        if (board[boardCurInd + 63] === null
+            && cells[boardCurInd + 63].classList.contains("noPieceHere") !== true
+            && board[boardCurInd + 54] < 12 && (board[boardCurInd + 9] !== null || board[boardCurInd + 18] !== null || board[boardCurInd + 27] !== null || board[boardCurInd + 36] !== null || board[boardCurInd + 45] !== null || board[boardCurInd + 54] !== null)) {
+            if (curSH === 'red-piece king' || curSH === 'black-piece king') {
+                res = true;
+            }
+        }
+        //////
+        if (board[boardCurInd - 14] === null && cells[boardCurInd - 14].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 7] < 12
+            && board[boardCurInd - 7] !== null) {
+            res = true;
+        }
+        if (board[boardCurInd - 18] === null && cells[boardCurInd - 18].classList.contains("noPieceHere") !== true
+            && board[boardCurInd - 9] < 12
+            && board[boardCurInd - 9] !== null) {
+            res = true;
+        }
+        return res;
+    }
+    // checkPieceConditions();//*9
+}
 //*7
 function getAvailableSpaces() {
+    // board.indexOf(parsed);
 
-    if (!checkAvailableJumpSpaces()) {
-        for (var el = 0; el < document.getElementsByClassName("cell").length; el++) {
-            document.getElementsByClassName("cell")[el].style.background = "linear-gradient(45deg, rgb(255, 255, 255), rgb(121, 121, 121))";
+    let map = new Map();
 
-        }
-        for (var el = 0; el < document.getElementsByClassName("noPieceHere").length; el++) {
-            document.getElementsByClassName("noPieceHere")[el].style.background = "linear-gradient(45deg, rgb(255, 224, 139), rgb(255, 167, 34))";
+    let hasPrivileg = false;
 
-        }
-
-        var curSH = document.getElementById(selectedPiece.pieceId).getAttribute('class');
-        if (board[selectedPiece.indexOfBoardPiece + 7] === null &&
-            cells[selectedPiece.indexOfBoardPiece + 7].classList.contains("noPieceHere") !== true) {
-            selectedPiece.seventhSpace = true;
-
-            if (turn || curSH === 'red-piece king' || curSH === 'black-piece king') {
-                document.getElementById("c" + (selectedPiece.indexOfBoardPiece + 7)).style.background = "rgb(19, 124, 19)";
-
+    for (let i = 0; i < 24; i++) {
+        if (board.indexOf(i) != -1) {
+            // console.log("\ni "+i+" "+board.indexOf(i))
+            if (checkAvailableJumpSpaces11(i)) {
+                hasPrivileg = true;
             }
-        }
-        if (board[selectedPiece.indexOfBoardPiece + 9] === null &&
-            cells[selectedPiece.indexOfBoardPiece + 9].classList.contains("noPieceHere") !== true) {
-            selectedPiece.ninthSpace = true;
-            if (turn || curSH === 'red-piece king' || curSH === 'black-piece king') {
-                document.getElementById("c" + (selectedPiece.indexOfBoardPiece + 9)).style.background = "rgb(19, 124, 19)";
-            }
-
-        }
-        if (board[selectedPiece.indexOfBoardPiece - 7] === null &&
-            cells[selectedPiece.indexOfBoardPiece - 7].classList.contains("noPieceHere") !== true) {
-            selectedPiece.minusSeventhSpace = true;
-            if ((!turn) || curSH === 'red-piece king' || curSH === 'black-piece king') {
-                document.getElementById("c" + (selectedPiece.indexOfBoardPiece - 7)).style.background = "rgb(19, 124, 19)";
-            }
-
-        }
-        if (board[selectedPiece.indexOfBoardPiece - 9] === null &&
-            cells[selectedPiece.indexOfBoardPiece - 9].classList.contains("noPieceHere") !== true) {
-            selectedPiece.minusNinthSpace = true;
-            if ((!turn) || curSH === 'red-piece king' || curSH === 'black-piece king') {
-                document.getElementById("c" + (selectedPiece.indexOfBoardPiece - 9)).style.background = "rgb(19, 124, 19)";
-            }
-
+            map.set(i, checkAvailableJumpSpaces11(i));
         }
     }
+
+    // for(let i=0;i<map.size;i++){
+    //     console.log("\n elemId "+i+" priv "+map.get(i))
+    // }
+
+
+   
+    if (hasPrivileg) {
+        //console.log("hasPrivileg: "+hasPrivileg)
+        for (let i = 0; i < 24; i++) {
+          //  console.log("map.get(i): "+map.keys.contains(i))
+            if (map.get(i) === true) {
+                if (selectedPiece.pieceId === i){
+                    // console.log("\n\n\n\n\n "+checkAvailableJumpSpaces())
+                    if (!checkAvailableJumpSpaces()) {
+                        for (var el = 0; el < document.getElementsByClassName("cell").length; el++) {
+                            document.getElementsByClassName("cell")[el].style.background = "linear-gradient(45deg, rgb(255, 255, 255), rgb(121, 121, 121))";
+
+                        }
+                        for (var el = 0; el < document.getElementsByClassName("noPieceHere").length; el++) {
+                            document.getElementsByClassName("noPieceHere")[el].style.background = "linear-gradient(45deg, rgb(255, 224, 139), rgb(255, 167, 34))";
+
+                        }
+
+                        var curSH = document.getElementById(selectedPiece.pieceId).getAttribute('class');
+                        if (board[selectedPiece.indexOfBoardPiece + 7] === null &&
+                            cells[selectedPiece.indexOfBoardPiece + 7].classList.contains("noPieceHere") !== true) {
+                            selectedPiece.seventhSpace = true;
+
+                            if (turn || curSH === 'red-piece king' || curSH === 'black-piece king') {
+                                document.getElementById("c" + (selectedPiece.indexOfBoardPiece + 7)).style.background = "rgb(19, 124, 19)";
+
+                            }
+                        }
+                        if (board[selectedPiece.indexOfBoardPiece + 9] === null &&
+                            cells[selectedPiece.indexOfBoardPiece + 9].classList.contains("noPieceHere") !== true) {
+                            selectedPiece.ninthSpace = true;
+                            if (turn || curSH === 'red-piece king' || curSH === 'black-piece king') {
+                                document.getElementById("c" + (selectedPiece.indexOfBoardPiece + 9)).style.background = "rgb(19, 124, 19)";
+                            }
+
+                        }
+                        if (board[selectedPiece.indexOfBoardPiece - 7] === null &&
+                            cells[selectedPiece.indexOfBoardPiece - 7].classList.contains("noPieceHere") !== true) {
+                            selectedPiece.minusSeventhSpace = true;
+                            if ((!turn) || curSH === 'red-piece king' || curSH === 'black-piece king') {
+                                document.getElementById("c" + (selectedPiece.indexOfBoardPiece - 7)).style.background = "rgb(19, 124, 19)";
+                            }
+
+                        }
+                        if (board[selectedPiece.indexOfBoardPiece - 9] === null &&
+                            cells[selectedPiece.indexOfBoardPiece - 9].classList.contains("noPieceHere") !== true) {
+                            selectedPiece.minusNinthSpace = true;
+                            if ((!turn) || curSH === 'red-piece king' || curSH === 'black-piece king') {
+                                document.getElementById("c" + (selectedPiece.indexOfBoardPiece - 9)).style.background = "rgb(19, 124, 19)";
+                            }
+
+                        }
+                    }
+                checkPieceConditions();//*9
+                }
+            }
+        }
+    }else{
+        if (!checkAvailableJumpSpaces()) {
+            for (var el = 0; el < document.getElementsByClassName("cell").length; el++) {
+                document.getElementsByClassName("cell")[el].style.background = "linear-gradient(45deg, rgb(255, 255, 255), rgb(121, 121, 121))";
+
+            }
+            for (var el = 0; el < document.getElementsByClassName("noPieceHere").length; el++) {
+                document.getElementsByClassName("noPieceHere")[el].style.background = "linear-gradient(45deg, rgb(255, 224, 139), rgb(255, 167, 34))";
+
+            }
+
+            var curSH = document.getElementById(selectedPiece.pieceId).getAttribute('class');
+            if (board[selectedPiece.indexOfBoardPiece + 7] === null &&
+                cells[selectedPiece.indexOfBoardPiece + 7].classList.contains("noPieceHere") !== true) {
+                selectedPiece.seventhSpace = true;
+
+                if (turn || curSH === 'red-piece king' || curSH === 'black-piece king') {
+                    document.getElementById("c" + (selectedPiece.indexOfBoardPiece + 7)).style.background = "rgb(19, 124, 19)";
+
+                }
+            }
+            if (board[selectedPiece.indexOfBoardPiece + 9] === null &&
+                cells[selectedPiece.indexOfBoardPiece + 9].classList.contains("noPieceHere") !== true) {
+                selectedPiece.ninthSpace = true;
+                if (turn || curSH === 'red-piece king' || curSH === 'black-piece king') {
+                    document.getElementById("c" + (selectedPiece.indexOfBoardPiece + 9)).style.background = "rgb(19, 124, 19)";
+                }
+
+            }
+            if (board[selectedPiece.indexOfBoardPiece - 7] === null &&
+                cells[selectedPiece.indexOfBoardPiece - 7].classList.contains("noPieceHere") !== true) {
+                selectedPiece.minusSeventhSpace = true;
+                if ((!turn) || curSH === 'red-piece king' || curSH === 'black-piece king') {
+                    document.getElementById("c" + (selectedPiece.indexOfBoardPiece - 7)).style.background = "rgb(19, 124, 19)";
+                }
+
+            }
+            if (board[selectedPiece.indexOfBoardPiece - 9] === null &&
+                cells[selectedPiece.indexOfBoardPiece - 9].classList.contains("noPieceHere") !== true) {
+                selectedPiece.minusNinthSpace = true;
+                if ((!turn) || curSH === 'red-piece king' || curSH === 'black-piece king') {
+                    document.getElementById("c" + (selectedPiece.indexOfBoardPiece - 9)).style.background = "rgb(19, 124, 19)";
+                }
+
+            }
+        }
     checkPieceConditions();//*9
+    }
 }
 
 //*6
