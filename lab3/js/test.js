@@ -1587,19 +1587,34 @@ function getAvailableSpaces() {
 
     let hasPrivileg = false;
 
-    for (let i = 0; i < 24; i++) {
-        if (board.indexOf(i) != -1) {
-            // console.log("\ni "+i+" "+board.indexOf(i))
-            if (checkAvailableJumpSpaces11(i)) {
-                hasPrivileg = true;
-            }
-            map.set(i, checkAvailableJumpSpaces11(i));
-        }
-    }
+    if (turn) {
+        for (let i = 0; i < 12; i++) {
+            if (board.indexOf(i) != -1) {
+                // console.log("\ni "+i+" "+board.indexOf(i))
+                if (checkAvailableJumpSpaces11(i)) {
+                    hasPrivileg = true;
+                    console.log("\n  priv " + i)
+                    console.log("\n  priv " + map1.get(board.indexOf(i) + 1))
 
-    // for(let i=0;i<map.size;i++){
-    //     console.log("\n elemId "+i+" priv "+map.get(i))
-    // }
+                }
+                map.set(i, checkAvailableJumpSpaces11(i));
+            }
+        }
+    } else {
+        for (let i = 12; i < 24; i++) {
+            if (board.indexOf(i) != -1) {
+                // console.log("\ni "+i+" "+board.indexOf(i))
+                if (checkAvailableJumpSpaces11(i)) {
+                    hasPrivileg = true;
+                    console.log("\n  priv " + i)
+                    console.log("\n  priv " + map1.get(board.indexOf(i) + 1))
+
+                }
+                map.set(i, checkAvailableJumpSpaces11(i));
+            }
+        }
+
+    }
 
 
    
